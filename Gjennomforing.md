@@ -57,6 +57,7 @@ Som nevnt i Planleggingsdokumentet mitt så blir Claude brukt her også. Jeg har
 - Updateset: STRY0019743 – FVK
 
 <img src="media/image1.png" style="width:3.29538in;height:3.76223in" /> <img src="media/image2.png" style="width:2.85356in;height:3.79499in" />
+![](/image1.png)
 
 ## Oppgavedokumentasjon
 
