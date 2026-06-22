@@ -57,7 +57,6 @@ Som nevnt i Planleggingsdokumentet mitt så blir Claude brukt her også. Jeg har
 - Updateset: STRY0019743 – FVK
 
 <img src="/image1.png" style="width:3.29538in;height:3.76223in" /> <img src="/image2.png" style="width:2.85356in;height:3.79499in" />
-![](/image1.png)
 
 ## Oppgavedokumentasjon
 
@@ -121,7 +120,7 @@ Jeg startet ved å åpne en tilfeldig change request og dermed scrolle ned for �
 
 (criticality blir laget som Setter Field Definitions)
 
-<img src="media/image3.png" style="width:5.10488in;height:1.33352in" />
+<img src="/image3.png" style="width:5.10488in;height:1.33352in" />
 
 - 20 matriserader laget
 
@@ -149,9 +148,9 @@ kjørte to tester som besto av Very High + All Users og fikk Criticality 1 som s
 
 Jeg sto fast en liten stund på en feil som kunne vært enkel om jeg hadde lest ferdig hele forklaringen på Data Lookup Definitions før jeg startet å jobbe. Criticality hadde jeg med ett uhell puttet i «Matcher» listen istedenfor «Setter» listen som gjorde at jeg aldri fikk noen form for output. Dette er fordi en matcher krever at verdien på changen er lik verdien i matriseraden, som betyr at changens tomme criticality aldri kunne matche, så ingen rad ble funnet. Endret dette ved å flytte den til «Setter» og da funket den som forventet.
 
-<img src="media/image4.png" style="width:4.52146in;height:1.14599in" />
+<img src="/image4.png" style="width:4.52146in;height:1.14599in" />
 
-<img src="media/image5.png" style="width:6.3in;height:2.57917in" />
+<img src="/image5.png" style="width:6.3in;height:2.57917in" />
 
 Siste blir å sette feltet i formen til Read-Only. Det finnes flere måter å gjøre dette på, men valgte å gjøre dette med en UI-Policy fordi UI Policy låser feltet på formen der brukeren møter det. Jeg valgte bevisst ikke hard dictionary-lås eller ACL fordi feltet ikke krever beskyttelse på datalag-nivå, Data Lookup eier verdien, og en form-level lås er tilstrekkelig for use casen.
 
@@ -191,7 +190,7 @@ Jeg startet med å finne frem Related listen som jeg skulle sette filteret på o
 
 Jeg gjorde ett kjapt søk i Servicenow dokumentasjonen og fant svaret umiddelbart.
 
-<img src="media/image6.png" style="width:6.3in;height:1.92153in" />
+<img src="/image6.png" style="width:6.3in;height:1.92153in" />
 
 Jeg var ikke klar over at det var en knapp som jeg hadde oversett hele tiden som gjør nøyaktig det jeg trengte.
 
@@ -201,7 +200,7 @@ Etter tilbakemelding fra Toheed så bygde jeg et mye mer omfattende filter baser
 
 Etter riktig filter var satt så kan jeg refreshe og filteret ble sittende uavhengig av hvilken bruker jeg «impersonatet» eller lokasjon som ble valgt.
 
-<img src="media/image7.png" style="width:6.3in;height:3.96528in" />
+<img src="/image7.png" style="width:6.3in;height:3.96528in" />
 
 V.1 (Category basert)  
 Filtrering på Category = Hardware var en foreløpig tilnærming. Avklarte med Toheed Ahmed (CMDB ansvarlig) om nettverksenheter bør filtreres på CI-klasse (sys_class_name) for å treffe kravet presist (routers/switches/APs/firewalls, ekskl. power supplies/interfaces)
@@ -250,7 +249,7 @@ Kjente begrensninger – Scriptet sletter uten rettighetssjekk (condition-felt e
 
 Kjørte Remove Selected action på en eksisterende change som inneholdt en god mengde med CI’er slik at jeg får et reelt brukstilfelle og test (valgte 2 koblinger her for å teste). Fikk tilbake en infomelding «2 koblinger fjernet», mengden CI’er gikk fra 1591 til 1589 stk og verifiserte i selve tabellen hvor de også var fjernet riktig (for å verifisere at det ikke bare var visuelt i changen) CI’ene sine koblinger var borte, men fortsatt i cmdb_ci tabellen som forventet.
 
-Under ligger bilde av change ticket sin CI liste før og etter, samt bilde av UI action som vises i lista på høyresiden. <img src="media/image8.png" style="width:6.3in;height:3.07917in" /><img src="media/image9.png" style="width:6.54251in;height:3.68377in" /> <img src="media/image10.png" style="width:2.08064in;height:3.57817in" />
+Under ligger bilde av change ticket sin CI liste før og etter, samt bilde av UI action som vises i lista på høyresiden. <img src="/image8.png" style="width:6.3in;height:3.07917in" /><img src="/image9.png" style="width:6.54251in;height:3.68377in" /> <img src="/image10.png" style="width:2.08064in;height:3.57817in" />
 
 ## Testrapport – TEST
 
